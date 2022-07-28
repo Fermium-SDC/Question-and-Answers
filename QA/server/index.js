@@ -10,5 +10,5 @@ const app = express();
 app.use(compression());
 app.use(express.json());
 
-app.listen(process.env.PORT);
-console.log(`Listening at http://localhost:${process.env.PORT}`);
+app.listen(process.env.SERVER_PORT);
+console.log(`Listening at http://localhost:${process.env.SERVER_PORT}`);
