@@ -1,11 +1,10 @@
 const express = require('express');
-const pg = require('pg');
 const queries = require('../models/queries');
 
-const router = express.Router();
+const answerRouter = express.Router();
 
-router.get('/qa/questions', (req, res) => {
+answerRouter.get('/qa', (req, res) => {
   queries.getQuestion(req, res);
 });
 
-module.exports = router;
+module.exports = answerRouter;

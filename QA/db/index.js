@@ -8,9 +8,6 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
-pool.query('SELECT * FROM photos', (err, res) => {
-  console.log(err, res);
-  pool.end();
-});
+pool.connect();
 
 module.exports = pool;
